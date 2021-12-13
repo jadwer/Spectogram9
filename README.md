@@ -1,2 +1,2 @@
-# spectagram-stage-9
-project solution c89
+# spectagram-etapa-9
+solución del proyecto c89
