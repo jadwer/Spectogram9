@@ -63,7 +63,7 @@ export default class PostScreen extends Component {
 
     render() {
         if (!this.props.route.params.value) {
-            this.props.navigation.navigate("Home");
+            this.props.navigation.navigate("Inicio");
         } else {
             return (
                 <View style={this.state.light_theme ? styles.containerLight : styles.container}>
