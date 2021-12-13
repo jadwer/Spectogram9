@@ -57,12 +57,12 @@ export default class CreatePost extends Component {
                 .set(postData)
                 .then(function (snapshot) { });
             this.props.setUpdateToTrue();
-            this.props.navigation.navigate("Feed");
+            this.props.navigation.navigate("Índice");
         } else {
             Alert.alert(
                 "Error",
-                "All fields are required!",
-                [{ text: "OK", onPress: () => console.log("OK Pressed") }],
+                "¡Se requieren todos los campos!",
+                [{ text: "OK", onPress: () => console.log("OK presionado") }],
                 { cancelable: false }
             );
         }
@@ -106,7 +106,7 @@ export default class CreatePost extends Component {
                         ></Image>
                     </View>
                     <View style={styles.appTitleTextContainer}>
-                        <Text style={this.state.light_theme ? styles.appTitleTextLight : styles.appTitleText}>New Post</Text>
+                        <Text style={this.state.light_theme ? styles.appTitleTextLight : styles.appTitleText}>Nueva publicación</Text>
                     </View>
                 </View>
                 <View style={styles.fieldsContainer}>
@@ -118,13 +118,13 @@ export default class CreatePost extends Component {
                         <View style={{ height: RFValue(this.state.dropdownHeight) }}>
                             <DropDownPicker
                                 items={[
-                                    { label: "Image 1", value: "image_1" },
-                                    { label: "Image 2", value: "image_2" },
-                                    { label: "Image 3", value: "image_3" },
-                                    { label: "Image 4", value: "image_4" },
-                                    { label: "Image 5", value: "image_5" },
-                                    { label: "Image 6", value: "image_6" },
-                                    { label: "Image 7", value: "image_7" }
+                                    { label: "Imagen 1", value: "image_1" },
+                                    { label: "Imagen 2", value: "image_2" },
+                                    { label: "Imagen 3", value: "image_3" },
+                                    { label: "Imagen 4", value: "image_4" },
+                                    { label: "Imagen 5", value: "image_5" },
+                                    { label: "Imagen 6", value: "image_6" },
+                                    { label: "Imagen 7", value: "image_7" }
                                 ]}
                                 defaultValue={this.state.previewImage}
                                 containerStyle={{
@@ -167,7 +167,7 @@ export default class CreatePost extends Component {
                         <View style={styles.submitButton}>
                             <Button
                                 onPress={() => this.addPost()}
-                                title="Submit"
+                                title="Subir"
                                 color="#841584"
                             />
                         </View>
