@@ -57,7 +57,7 @@ export default class Feed extends Component {
                 this.setState({ posts: posts })
                 this.props.setUpdateToFalse();
             }, function (errorObject) {
-                console.log("The read failed: " + errorObject.code);
+                console.log("La lectura falló: " + errorObject.code);
             })
     }
 
@@ -86,7 +86,7 @@ export default class Feed extends Component {
                 {
                     !this.state.posts[0] ?
                         <View style={styles.noPosts}>
-                            <Text style={this.state.light_theme ? styles.noPostsTextLight : styles.noPostsText}>No Posts Available</Text>
+                            <Text style={this.state.light_theme ? styles.noPostsTextLight : styles.noPostsText}>No hay publicaciones disponibles</Text>
                         </View> :
                         <View style={styles.cardContainer}>
                             <FlatList
